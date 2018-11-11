@@ -33,12 +33,13 @@
 
       let text = $("#text-to-change");
       text.css("font-size", "25px");
-      text.css("color", "red");
+      text.css("color", "blue");
 
     }
 
     // attach event handler
     $("#text-change-btn").on("click", changeText);
+
 
   </script>
 
@@ -61,6 +62,10 @@
         let image = $("#lightbulb-img");
         if (image.attr('src').indexOf("bulboff") !== -1) {
             image.attr('src', "img/pic_bulbon.gif");
+        }
+        else{
+          image.attr('src', "img/pic_bulboff.gif");
+
         }
 
     }
@@ -97,7 +102,7 @@
       number = $('#number-input').val();
 
       // If 'number' is Not a Number or less than one or greater than 10
-      if (isNaN(number) || number < 1 || number > 10) {
+      if (isNaN(number) || number < 1 || number > 100) {
           text = "Input not valid";
       } else {
           text = "Input OK";
